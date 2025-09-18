@@ -1,0 +1,129 @@
+---
+# GitHub Workflow: Add Issues to Ignite Project
+#
+# This workflow automatically:
+# 1. Adds new issues to the Ignite GitHub Project
+# 2. Applies intelligent labels based on issue content
+# 3. Adds Ignite 2025 and LAB515 labels to all issues
+#
+# Setup Requirements:
+# 1. Update PROJECT_URL below with the actual Ignite project URL
+# 2. Create a PAT with 'project' and 'repo' scopes
+# 3. Add the PAT as a repository secret named 'ADD_TO_PROJECT_PAT'
+#
+# For more information, see:
+# https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/adding-items-automatically
+
+name: Add Issues to Ignite Project
+
+"on":
+  issues:
+    types:
+      - opened
+
+env:
+  # Replace with your actual project URL
+  PROJECT_URL: >
+    https://github.com/orgs/microsoft/projects/YOUR_PROJECT_NUMBER
+
+jobs:
+  add-to-project:
+    name: Add issue to Ignite project
+    runs-on: ubuntu-latest
+    if: >
+      github.repository ==
+      'microsoft/ignite25-LAB515-build-advanced-ai-agents-with-postgresql'
+    steps:
+      - name: Add issue to project
+        uses: actions/add-to-project@v0.6.1
+        with:
+          project-url: ${{ env.PROJECT_URL }}
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        id: add-project
+
+  label_issues:
+    name: Apply labels to new issues
+    runs-on: ubuntu-latest
+    if: >
+      github.repository ==
+      'microsoft/ignite25-LAB515-build-advanced-ai-agents-with-postgresql'
+    steps:
+      - name: Apply default labels
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+            const labels = [];
+
+            // Add default labels for new issues
+            labels.push('triage');
+
+            // Auto-categorize based on title/body content
+            const title = issue.title.toLowerCase();
+            const body = issue.body ? issue.body.toLowerCase() : '';
+
+            // Bug detection
+            if (title.includes('bug') || title.includes('error') ||
+                title.includes('issue') || body.includes('error') ||
+                body.includes('exception') || body.includes('bug')) {
+              labels.push('bug');
+            }
+
+            // Feature request detection
+            if (title.includes('feature') || title.includes('enhancement') ||
+                title.includes('request') || body.includes('feature') ||
+                body.includes('enhancement')) {
+              labels.push('enhancement');
+            }
+
+            // Documentation related
+            if (title.includes('doc') || title.includes('readme') ||
+                title.includes('documentation') ||
+                body.includes('documentation') || body.includes('docs')) {
+              labels.push('documentation');
+            }
+
+            // Lab specific
+            if (title.includes('lab') || body.includes('lab') ||
+                title.includes('exercise') || body.includes('exercise')) {
+              labels.push('lab');
+            }
+
+            // AI/Agent related
+            if (title.includes('ai') || title.includes('agent') ||
+                title.includes('postgresql') || body.includes('ai') ||
+                body.includes('agent') || body.includes('postgresql')) {
+              labels.push('ai-agents');
+            }
+
+            // Priority detection
+            if (title.includes('urgent') || title.includes('critical') ||
+                title.includes('blocking') || body.includes('urgent') ||
+                body.includes('critical') || body.includes('blocking')) {
+              labels.push('priority:high');
+            }
+
+            // Apply labels if any were determined
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: labels
+              });
+
+              console.log(`Applied labels: ${labels.join(', ')}`);
+            }
+
+      - name: Add Ignite 2025 label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: ['ignite-2025', 'LAB515']
+            });
