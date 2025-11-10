@@ -1,115 +1,104 @@
-# Welcome Ignite 2025 Creators!
-
-Thanks for creating content for Ignite!  Please follow this guidance so all ignite repos have the same look and feel.
-
-## How to contact Skillable?
-
-If you have issues with the Skillable environment, please follow these steps:
-
-1. Open an issue in the [Issues](../../issues) tab using the `New issue` button.
-1. Describe the problem, be descriptive, use screenshots if possible etc.
-1. Tag the following Skillable employees:
-   - @kylerosenthal
-   - @TubaMikeBob
-   - @Naimjones16
-   - @jmbauf
-1. Have all the discussions related to the issue in the issue itself.
-1. Once the issue is resolved, please mark it as Closed.
-
-## Put your docs in the docs folder
-
-This repo is configured for a user to view the docs through mkdocs.
-
-1. update the `mkdocs.yml` file to reference your session. Look particularly for the `site_name`, `site_author`, and `repo_name` tags.
-1. Subfolders in the docs folder will show up as tabs in the navigation bar.
-
-## Guidance
-
-1. Do not turn on github pages for this repo, traffic to github pages isn't captured in our metrics.
-1. Do not store slides or recordings in this repo
-
-## Update the badges!
-
-1. if the foundry discord and github links aren't appropriate for your session you can remove or change them.
-2. See shields.io for how to build your own dynamic or static badge for your community destinations, or other sample repos for how they've done
-3. Please limit your repo to one row of badges under the session title.
-
-## MCP Server
-1. This repo has an mcp.json file and is configured to let agents connect to the Learn MCP Server.
-
-> **Important** Make sure to avoid hardcoding sensitive information like API keys and other credentials by using input variables or environment files.
-
-
-## Update this readme below
-
-1. Fill out the content in this file, below the banner graphic, including the session code.
-2. Please embed links to Learn with your campaign codes!
-3. Add resources for your session to the Resources and Next Steps table
-4. Change the Content Owner section to your info
-5. Change the placeholder session code BRKXXX to your session code.
-
-## Improve SEO
-
-1. Update the Repo Info for this repo 
-    1. Click the gear icon⚙️ in the upper right.
-    1. Set a good description of this repo.
-    1. Add the technologies that you're using in this session.
-
-## Questions?
-
-Send them to [Mike Kinsman](mailto:mikki@microsoft.com) and [Laurent Bugnion](lbugnion@microsoft.com), or surface your question through your content leads.  We are also monitoring issues logged in the repos.
-
-## Finished?
-
-- Remove the folders that you don't need or didn't use, *please don't leave them empty with placeholder readmes*
-- Delete this line and everything above it!
-
-<p align="center">
-<img src="img/Banner-ignite-25.png" alt="decorative banner" width="1200"/>
-</p>
-
 # [Microsoft Ignite 2025](https://ignite.microsoft.com)
 
-## 🔥BRKXXX: Build advanced AI Agents with PostgreSQL
+## 🔥LAB515: Build advanced AI Agents with PostgreSQL
 
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/AIFoundryDiscord-Ignite25)
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=adff2f&logoColor=fff)](https://aka.ms/AIFoundryForum-Ignite25)
+[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=adff2f&logoColor=fff)](https://aka.ms/foundry/forum)
 
-### Session Description
+### 🧠 Session Description
 
-*Add Session Description*
+In this hands-on lab, you’ll build an AI-powered legal research assistant that reasons over real-world case law data using PostgreSQL and Semantic Kernel.
+You’ll learn how to combine retrieval-augmented generation (RAG), vector search, and graph intelligence to develop an agentic workflow capable of generating accurate, contextual, and explainable answers — all running on Azure Database for PostgreSQL.
 
-### 🧠 Learning Outcomes
+### 💡 Learning Outcomes
 
-By the end of this session, learners will be able to:
+By the end of this lab, you will be able to:
 
--  
--
--
+- Configure Azure Database for PostgreSQL Flexible Server with AI extensions (`azure_ai`, `pgvector`, `diskann`, and `apache_age`)
+- Use Semantic Kernel to build autonomous agents with database and web plugins
+- Implement semantic search and reranking using vector embeddings
+- Enhance reasoning quality using the GraphRAG pattern
+- Deploy your AI agent and supporting infrastructure on Azure using Bicep and CLI automation
 
 ### 💻 Technologies Used
 
-1.
-1.
-1.
+1. Azure Database for PostgreSQL Flexible Server (with AI extensions)
+1. Semantic Kernel (for agent orchestration)
+1. Azure OpenAI Service (embeddings + LLM completions)
+1. Python (agent runtime and notebook execution)
+1. Apache `AGE` (for graph storage and reasoning)
+1. `DiskANN` (for fast approximate vector similarity search)
+1. VS Code PostgreSQL Extension (for hands-on queries and debugging)
 
-### 🌟 Microsoft Learn MCP Server
+### 🏗️ Architecture
 
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Microsoft_Docs_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=microsoft.docs.mcp&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Flearn.microsoft.com%2Fapi%2Fmcp%22%7D)
+```mathematica
+User Query → Semantic Kernel Agent → PostgreSQL (Vector + Graph + AI) → Azure OpenAI → Contextual Answer
+```
 
-The Microsoft Learn MCP Server is a remote MCP Server that enables clients like GitHub Copilot and other AI agents to bring trusted and up-to-date information directly from Microsoft's official documentation. Get started by using the one-click button above for VSCode or access the [mcp.json](.vscode/mcp.json) file included in this repo.
+- Semantic Kernel Agent: Handles reasoning, plugin invocation, and dialogue context.
+- PostgreSQL: Stores case law data, embeddings, and graph relationships.
+- GraphRAG: Uses Apache AGE to connect related entities and improve recall.
+- Azure OpenAI: Powers embeddings and completion for semantic responses.
 
-For more information, setup instructions for other dev clients, and to post comments and questions, visit our Learn MCP Server GitHub repo at [https://github.com/MicrosoftDocs/MCP](https://github.com/MicrosoftDocs/MCP). Find other MCP Servers to connect your agent to at [https://mcp.azure.com](https://mcp.azure.com).
+### 📘 Lab Structure
 
-*Note: When you use the Learn MCP Server, you agree with [Microsoft Learn](https://learn.microsoft.com/en-us/legal/termsofuse) and [Microsoft API Terms](https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use) of Use.*
+|Folder                |Description                                             |
+|----------------------|--------------------------------------------------------|
+|lab/                  |Core Jupyter notebooks and sample scripts               |
+|data/                 |Sample dataset (cases.csv) for legal research queries   |
+|src/                  |Source code for agents, plugins, and database connectors|
+|docs/                 |Step-by-step lab manual and architecture guide          |
+|img/                  |Architecture and concept diagrams                       |
+|.devcontainer/        |Preconfigured environment for VS Code                   |
+|infra/ (if applicable)|Deployment templates (Bicep + PowerShell scripts)       |
+
+### 🚀 Getting Started
+
+#### 1️⃣ Setup Environment
+
+- Ensure you have an Azure subscription with access to Azure OpenAI.
+- Install required CLI tools:
+
+```bash
+azd auth login
+azd env new
+azd provision
+```
+This will deploy the Azure resources (PostgreSQL + OpenAI) and generate a .env file containing connection details.
+
+#### 2️⃣ Configure Database
+
+Use the provided scripts in /lab to:
+    - Initialize tables and vector indexes
+    - Load the sample case law dataset
+    - Enable `azure_ai`, `pgvector`, and `apache_age` extensions
+
+#### 3️⃣ Run the Lab Notebook
+
+Open `lab/ai-agent-lab.ipynb` in Visual Studio Code and follow the guided steps to:
+
+- Connect to your database
+- Generate embeddings
+- Execute semantic and graph-based queries
+- Interact with your AI Agent
+
+### 🌐 MCP Server Integration
+
+This lab includes a connection to the Microsoft Learn MCP Server.
+It allows your AI Agent (via Semantic Kernel) to access trusted Microsoft Learn documentation in real time.
+
+Learn more: https://github.com/MicrosoftDocs/MCP
 
 ### 📚 Resources and Next Steps
 
-| Resources          | Links                             | Description        |
-|:-------------------|:----------------------------------|:-------------------|
-| Ignite 2025 Next Steps | [https://aka.ms/Ignite25-Next-Steps](https://aka.ms/Ignite25-Next-Steps?ocid=ignite25_nextsteps_cnl) | Links to all repos for AI Tour 26 Sessions |
-| Azure AI Foundry Community Discord | [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/AIFoundryDiscord-Ignite25)| Connect with the Azure AI Foundry Community! |
-| Learn at Ignite | [https://aka.ms/LearnAtIgnite](https://aka.ms/LearnAtIgnite?ocid=ignite25_nextsteps_github_cnl) | Continue learning on Microsoft Learn |
+|Resource                |Link                                |Description                                    |
+|------------------------|------------------------------------|-----------------------------------------------|
+|Ignite 2025 Next Steps  |https://aka.ms/Ignite25-Next-Steps  |Explore all Ignite 2025 learning paths         |
+|Azure AI Foundry Discord|https://aka.ms/azureaifoundrydiscord|Connect with the Azure AI Foundry team         |
+|Learn at Ignite         |https://aka.ms/LearnAtIgnite        |Continue learning on Microsoft Learn           |
+|GraphRAG for PostgreSQL |aka.ms/GraphRAG-PG                  |Learn how to add graph intelligence to Postgres|
+|Semantic Kernel Docs    |https://aka.ms/SemanticKernel       |Build your own AI agents with SK               |
 
 ## Content Owners
 
