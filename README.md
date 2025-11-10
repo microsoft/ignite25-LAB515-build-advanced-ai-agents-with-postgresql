@@ -102,28 +102,34 @@ Learn more: https://github.com/MicrosoftDocs/MCP
 
 ## Content Owners
 
-<!-- TODO: Add yourself as a content owner
-1. Change the src in the image tag to {your github url}.png
-2. Change INSERT NAME HERE to your name
-3. Change the github url in the final href to your url. -->
-
 <table>
 <tr>
-    <td align="center"><a href="http://github.com/mikekinsman">
-        <img src="https://github.com/mikekinsman.png" width="100px;" alt="INSERT NAME HERE"
-"/><br />
-        <sub><b> INSERT NAME HERE
-</b></sub></a><br />
-            <a href="https://github.com/mikekinsman" title="talk">📢</a> 
+    <td align="center"><a href="https://github.com/varun-dhawan">
+        <img src="https://github.com/varun-dhawan.png" width="100px;" alt="Varun Dhawan"/><br />
+        <sub><b>Varun Dhawan</b></sub>
+    </a><br />
+        <a href="https://github.com/varun-dhawan" title="talk">📢</a> 
     </td>
-    <td align="center"><a href="http://github.com/mikekinsman">
-        <img src="https://github.com/mikekinsman.png" width="100px;" alt="INSERT NAME HERE
-"/><br />
-        <sub><b>INSERT NAME HERE
-</b></sub></a><br />
-            <a href="https://github.com/mikekinsman" title="talk">📢</a> 
+    <td align="center"><a href="https://github.com/jjfrost">
+        <img src="https://github.com/jjfrost.png" width="100px;" alt="Jason Frost"/><br />
+        <sub><b>Jason Frost</b></sub>
+    </a><br />
+        <a href="https://github.com/jjfrost" title="talk">📢</a> 
     </td>
-</tr></table>
+    <td align="center"><a href="https://github.com/JaredMSFT">
+        <img src="https://github.com/JaredMSFT.png" width="100px;" alt="Jared Shockley"/><br />
+        <sub><b>Jared Shockley</b></sub>
+    </a><br />
+        <a href="https://github.com/JaredMSFT" title="talk">📢</a> 
+    </td>
+    <td align="center"><a href="https://github.com/gaurikasar">
+        <img src="https://github.com/gaurikasar.png" width="100px;" alt="Gauri Kasar"/><br />
+        <sub><b>Gauri Kasar</b></sub>
+    </a><br />
+        <a href="https://github.com/gaurikasar" title="talk">📢</a> 
+    </td>
+</tr>
+</table>
 
 
 ## Contributing
