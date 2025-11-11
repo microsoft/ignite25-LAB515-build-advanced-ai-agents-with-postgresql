@@ -109,25 +109,25 @@ Learn more: https://github.com/MicrosoftDocs/MCP
 <table>
 <tr>
     <td align="center"><a href="https://github.com/varun-dhawan">
-        <img src="https://github.com/varun-dhawan.png" width="100px;" alt="Varun Dhawan."/><br />
+        <img src="https://github.com/varun-dhawan.png" width="100px;" alt="Varun Dhawan"/><br />
         <sub><b>Varun Dhawan</b></sub>
     </a><br />
         <a href="https://github.com/varun-dhawan" title="talk">📢</a> 
     </td>
     <td align="center"><a href="https://github.com/jjfrost">
-        <img src="https://github.com/jjfrost.png" width="100px;" alt="Jonathon Frost."/><br />
-        <sub><b>Jason Frost</b></sub>
+        <img src="https://github.com/jjfrost.png" width="100px;" alt="Jonathon Frost"/><br />
+        <sub><b>Jonathon Frost</b></sub>
     </a><br />
         <a href="https://github.com/jjfrost" title="talk">📢</a> 
     </td>
     <td align="center"><a href="https://github.com/JaredMSFT">
-        <img src="https://github.com/JaredMSFT.png" width="100px;" alt="Jared Meade."/><br />
-        <sub><b>Jared Shockley</b></sub>
+        <img src="https://github.com/JaredMSFT.png" width="100px;" alt="Jared Meade"/><br />
+        <sub><b>Jared Meade</b></sub>
     </a><br />
         <a href="https://github.com/JaredMSFT" title="talk">📢</a> 
     </td>
     <td align="center"><a href="https://github.com/gaurikasar">
-        <img src="https://github.com/gaurikasar.png" width="100px;" alt="Gauri Kasar."/><br />
+        <img src="https://github.com/gaurikasar.png" width="100px;" alt="Gauri Kasar"/><br />
         <sub><b>Gauri Kasar</b></sub>
     </a><br />
         <a href="https://github.com/gaurikasar" title="talk">📢</a> 
