@@ -115,13 +115,13 @@ Learn more: https://github.com/MicrosoftDocs/MCP
         <a href="https://github.com/varun-dhawan" title="talk">📢</a> 
     </td>
     <td align="center"><a href="https://github.com/jjfrost">
-        <img src="https://github.com/jjfrost.png" width="100px;" alt="Jason Frost"/><br />
+        <img src="https://github.com/jjfrost.png" width="100px;" alt="Jonathon Frost"/><br />
         <sub><b>Jason Frost</b></sub>
     </a><br />
         <a href="https://github.com/jjfrost" title="talk">📢</a> 
     </td>
     <td align="center"><a href="https://github.com/JaredMSFT">
-        <img src="https://github.com/JaredMSFT.png" width="100px;" alt="Jared Shockley"/><br />
+        <img src="https://github.com/JaredMSFT.png" width="100px;" alt="Jared Meade"/><br />
         <sub><b>Jared Shockley</b></sub>
     </a><br />
         <a href="https://github.com/JaredMSFT" title="talk">📢</a> 
