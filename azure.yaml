@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+name: pg-sk-agents-lab
+metadata:
+    template: pg-sk-agents-lab@0.0.1
+requiredVersions:
+    azd: ">= 1.10.0"
+hooks:
+    postprovision:
+      windows:
+        shell: pwsh
+        run: ./scripts/write_env.ps1
+        interactive: true
+        continueOnError: false
+      posix:
+        shell: sh
+        run: ./scripts/write_env.sh
+        interactive: true
+        continueOnError: false

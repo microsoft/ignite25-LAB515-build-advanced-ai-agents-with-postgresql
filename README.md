@@ -1,17 +1,29 @@
 # [Microsoft Ignite 2025](https://ignite.microsoft.com)
 
 ## 🔥LAB515: Build advanced AI Agents with PostgreSQL
+## 🔥LAB515: Build advanced AI Agents with PostgreSQL
 
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=adff2f&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ### 🧠 Session Description
+### 🧠 Session Description
 
+In this hands-on lab, you’ll build an AI-powered legal research assistant that reasons over real-world case law data using PostgreSQL and Semantic Kernel.
+You’ll learn how to combine retrieval-augmented generation (RAG), vector search, and graph intelligence to develop an agentic workflow capable of generating accurate, contextual, and explainable answers — all running on Azure Database for PostgreSQL.
 In this hands-on lab, you’ll build an AI-powered legal research assistant that reasons over real-world case law data using PostgreSQL and Semantic Kernel.
 You’ll learn how to combine retrieval-augmented generation (RAG), vector search, and graph intelligence to develop an agentic workflow capable of generating accurate, contextual, and explainable answers — all running on Azure Database for PostgreSQL.
 
 ### 💡 Learning Outcomes
+### 💡 Learning Outcomes
 
+By the end of this lab, you will be able to:
+
+- Configure Azure Database for PostgreSQL Flexible Server with AI extensions (`azure_ai`, `pgvector`, `diskann`, and `apache_age`)
+- Use Semantic Kernel to build autonomous agents with database and web plugins
+- Implement semantic search and reranking using vector embeddings
+- Enhance reasoning quality using the GraphRAG pattern
+- Deploy your AI agent and supporting infrastructure on Azure using Bicep and CLI automation
 By the end of this lab, you will be able to:
 
 - Configure Azure Database for PostgreSQL Flexible Server with AI extensions (`azure_ai`, `pgvector`, `diskann`, and `apache_age`)
@@ -99,31 +111,44 @@ Learn more: https://github.com/MicrosoftDocs/MCP
 |Learn at Ignite         |https://aka.ms/LearnAtIgnite        |Continue learning on Microsoft Learn           |
 |GraphRAG for PostgreSQL |aka.ms/GraphRAG-PG                  |Learn how to add graph intelligence to Postgres|
 |Semantic Kernel Docs    |https://aka.ms/SemanticKernel       |Build your own AI agents with SK               |
+|Resource                |Link                                |Description                                    |
+|------------------------|------------------------------------|-----------------------------------------------|
+|Ignite 2025 Next Steps  |https://aka.ms/Ignite25-Next-Steps  |Explore all Ignite 2025 learning paths         |
+|Azure AI Foundry Discord|https://aka.ms/azureaifoundrydiscord|Connect with the Azure AI Foundry team         |
+|Learn at Ignite         |https://aka.ms/LearnAtIgnite        |Continue learning on Microsoft Learn           |
+|GraphRAG for PostgreSQL |aka.ms/GraphRAG-PG                  |Learn how to add graph intelligence to Postgres|
+|Semantic Kernel Docs    |https://aka.ms/SemanticKernel       |Build your own AI agents with SK               |
 
 ## Content Owners
 
-<!-- TODO: Add yourself as a content owner
-1. Change the src in the image tag to {your github url}.png
-2. Change INSERT NAME HERE to your name
-3. Change the github url in the final href to your url. -->
-
 <table>
 <tr>
-    <td align="center"><a href="http://github.com/mikekinsman">
-        <img src="https://github.com/mikekinsman.png" width="100px;" alt="INSERT NAME HERE"
-"/><br />
-        <sub><b> INSERT NAME HERE
-</b></sub></a><br />
-            <a href="https://github.com/mikekinsman" title="talk">📢</a> 
+    <td align="center"><a href="https://github.com/varun-dhawan">
+        <img src="https://github.com/varun-dhawan.png" width="100px;" alt="Varun Dhawan"/><br />
+        <sub><b>Varun Dhawan</b></sub>
+    </a><br />
+        <a href="https://github.com/varun-dhawan" title="talk">📢</a> 
     </td>
-    <td align="center"><a href="http://github.com/mikekinsman">
-        <img src="https://github.com/mikekinsman.png" width="100px;" alt="INSERT NAME HERE
-"/><br />
-        <sub><b>INSERT NAME HERE
-</b></sub></a><br />
-            <a href="https://github.com/mikekinsman" title="talk">📢</a> 
+    <td align="center"><a href="https://github.com/jjfrost">
+        <img src="https://github.com/jjfrost.png" width="100px;" alt="Jonathon Frost"/><br />
+        <sub><b>Jonathon Frost</b></sub>
+    </a><br />
+        <a href="https://github.com/jjfrost" title="talk">📢</a> 
     </td>
-</tr></table>
+    <td align="center"><a href="https://github.com/JaredMSFT">
+        <img src="https://github.com/JaredMSFT.png" width="100px;" alt="Jared Meade"/><br />
+        <sub><b>Jared Meade</b></sub>
+    </a><br />
+        <a href="https://github.com/JaredMSFT" title="talk">📢</a> 
+    </td>
+    <td align="center"><a href="https://github.com/gaurikasar">
+        <img src="https://github.com/gaurikasar.png" width="100px;" alt="Gauri Kasar"/><br />
+        <sub><b>Gauri Kasar</b></sub>
+    </a><br />
+        <a href="https://github.com/gaurikasar" title="talk">📢</a> 
+    </td>
+</tr>
+</table>
 
 
 ## Contributing
@@ -140,7 +165,6 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
 trademarks or logos is subject to and must follow
