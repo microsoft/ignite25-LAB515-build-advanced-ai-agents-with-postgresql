@@ -111,7 +111,7 @@ Open `Code/lab.ipynb` in Visual Studio Code and follow the guided steps to:
 
 |Resource                |Link                                |Description                                    |
 |------------------------|------------------------------------|-----------------------------------------------|
-|Ignite 2025 Next Steps  |https://aka.ms/Ignite25-Next-Steps  |Explore all Ignite 2025 learning paths         |
+|Ignite 2025 Next Steps  |[https://aka.ms/Ignite25-Next-Steps](https://aka.ms/Ignite25-Next-Steps?ocid=ignite25_nextsteps_cnl)  |Links to all repos for Ignite 2025 Sessions   |
 |Azure AI Foundry Discord|https://aka.ms/azureaifoundrydiscord|Connect with the Azure AI Foundry team         |
 |Learn at Ignite         |https://aka.ms/LearnAtIgnite        |Continue learning on Microsoft Learn           |
 |GraphRAG for PostgreSQL |aka.ms/GraphRAG-PG                  |Learn how to add graph intelligence to Postgres|
