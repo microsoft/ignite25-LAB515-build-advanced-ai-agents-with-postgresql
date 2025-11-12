@@ -1,4 +1,4 @@
-<p align="center">
+<p>
 <img src="img/Banner-ignite-25.png" alt="decorative banner" width="1200"/>
 </p>
 
@@ -39,23 +39,43 @@ By the end of this lab, you will be able to:
 ```mathematica
  User Query → Semantic Kernel Agent → PostgreSQL (Vector + Graph + AI) → Azure OpenAI → Contextual Answer
 ```
+![Architecture](./Docs/images/arch.png)
 
 - Semantic Kernel Agent: Handles reasoning, plugin invocation, and dialogue context.
 - PostgreSQL: Stores case law data, embeddings, and graph relationships.
 - GraphRAG: Uses Apache AGE to connect related entities and improve recall.
 - Azure OpenAI: Powers embeddings and completion for semantic responses.
 
+### Lab Sections
+
+1. **Setup Azure PostgreSQL Database**:
+   - Database connection and configuration
+   - Install the `azure_ai` extension
+   - Configure Azure OpenAI connectivity
+
+2. **Using AI-driven features in PostgreSQL**:
+   - Pattern matching queries
+   - Semantic vector search using embeddings
+   - DiskANN indexing for fast vector similarity search
+
+3. **Building the Agent Application**:
+   - Setting up Semantic Kernel
+   - Creating database search plugins
+   - Implementing semantic reranking
+   - Adding external data sources
+   - Testing and improving the agent
+
 ### 📘 Lab Structure
 
 |Folder                |Description                                               |
 |----------------------|----------------------------------------------------------|
-|`lab/`                  |Core Jupyter notebooks and sample scripts               |
-|`data/`                 |Sample dataset (cases.csv) for legal research queries   |
-|`src/`                  |Source code for agents, plugins, and database connectors|
-|`docs/`                 |Step-by-step lab manual and architecture guide          |
-|`img/`                  |Architecture and concept diagrams                       |
+|`Code/`                 |Core Jupyter notebooks and sample scripts               |
+|`Dataset/`              |Sample dataset (cases.csv) for legal research queries   |
+|`Scripts/`              |Source code for agents, plugins, and database connectors|
+|`Docs/`                 |Step-by-step lab manual and architecture guide          |
+|`Docs/images`           |Architecture and concept diagrams                       |
 |`.devcontainer/`        |Preconfigured environment for VS Code                   |
-|`infra/` (if applicable)|Deployment templates (Bicep + PowerShell scripts)       |
+|`infra/`                |Deployment templates (Bicep + PowerShell scripts)       |
 
 ### 🚀 Getting Started
 
@@ -73,26 +93,19 @@ This will deploy the Azure resources (PostgreSQL + OpenAI) and generate a `.env`
 
 #### 2️⃣ Configure Database
 
-Use the provided scripts in /lab to:
+Use the provided scripts in Scripts/ to:
     - Initialize tables and vector indexes
     - Load the sample case law dataset
     - Enable `azure_ai`, `pgvector`, and `apache_age` extensions
 
 #### 3️⃣ Run the Lab Notebook
 
-Open `lab/ai-agent-lab.ipynb` in Visual Studio Code and follow the guided steps to:
+Open `Code/lab.ipynb` in Visual Studio Code and follow the guided steps to:
 
 - Connect to your database
 - Generate embeddings
 - Execute semantic and graph-based queries
 - Interact with your AI Agent
-
-### 🌐 MCP Server Integration
-
-This lab includes a connection to the Microsoft Learn MCP Server.
-It allows your AI Agent (via Semantic Kernel) to access trusted Microsoft Learn documentation in real time.
-
-Learn more: https://github.com/MicrosoftDocs/MCP
 
 ### 📚 Resources and Next Steps
 
@@ -150,7 +163,6 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
 trademarks or logos is subject to and must follow
