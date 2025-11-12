@@ -11,7 +11,7 @@
 
 ### 🧠 Session Description
 
-In this hands-on lab, you’ll build an AI-powered legal research assistant that reasons over real-world case law data using PostgreSQL and Semantic Kernel.
+In this hands-on lab, you’ll build an AI-powered legal research assistant that reasons over real-world case law data using PostgreSQL and Microsoft Agent Framework.
 You’ll learn how to combine retrieval-augmented generation (RAG), vector search, and graph intelligence to develop an agentic workflow capable of generating accurate, contextual, and explainable answers — all running on Azure Database for PostgreSQL.
 
 ### 💡 Learning Outcomes
@@ -19,7 +19,7 @@ You’ll learn how to combine retrieval-augmented generation (RAG), vector searc
 By the end of this lab, you will be able to:
 
 - Configure Azure Database for PostgreSQL Flexible Server with AI extensions (`azure_ai`, `pgvector`, `diskann`, and `apache_age`)
-- Use Semantic Kernel to build autonomous agents with database and web plugins
+- Use Microsoft Agent Framework to build autonomous agents with database and web plugins
 - Implement semantic search and reranking using vector embeddings
 - Enhance reasoning quality using the GraphRAG pattern
 - Deploy your AI agent and supporting infrastructure on Azure using Bicep and CLI automation
@@ -27,7 +27,7 @@ By the end of this lab, you will be able to:
 ### 💻 Technologies Used
 
 1. Azure Database for PostgreSQL Flexible Server (with AI extensions)
-1. Semantic Kernel (for agent orchestration)
+1. Microsoft Agent Framework (for agent orchestration)
 1. Azure OpenAI Service (embeddings + LLM completions)
 1. Python (agent runtime and notebook execution)
 1. Apache `AGE` (for graph storage and reasoning)
@@ -37,11 +37,11 @@ By the end of this lab, you will be able to:
 ### 🏗️ Architecture
 
 ```mathematica
- User Query → Semantic Kernel Agent → PostgreSQL (Vector + Graph + AI) → Azure OpenAI → Contextual Answer
+ User Query → Microsoft Agent Framework → PostgreSQL (Vector + Graph + AI) → Azure OpenAI → Contextual Answer
 ```
 ![Architecture](./Docs/images/arch.png)
 
-- Semantic Kernel Agent: Handles reasoning, plugin invocation, and dialogue context.
+- Microsoft Agent Framework: Handles reasoning, plugin invocation, and dialogue context.
 - PostgreSQL: Stores case law data, embeddings, and graph relationships.
 - GraphRAG: Uses Apache AGE to connect related entities and improve recall.
 - Azure OpenAI: Powers embeddings and completion for semantic responses.
@@ -59,7 +59,7 @@ By the end of this lab, you will be able to:
    - DiskANN indexing for fast vector similarity search
 
 3. **Building the Agent Application**:
-   - Setting up Semantic Kernel
+   - Setting up Microsoft Agent Framework
    - Creating database search plugins
    - Implementing semantic reranking
    - Adding external data sources
@@ -115,7 +115,6 @@ Open `Code/lab.ipynb` in Visual Studio Code and follow the guided steps to:
 |Azure AI Foundry Discord|https://aka.ms/azureaifoundrydiscord|Connect with the Azure AI Foundry team         |
 |Learn at Ignite         |https://aka.ms/LearnAtIgnite        |Continue learning on Microsoft Learn           |
 |GraphRAG for PostgreSQL |aka.ms/GraphRAG-PG                  |Learn how to add graph intelligence to Postgres|
-|Semantic Kernel Docs    |https://aka.ms/SemanticKernel       |Build your own AI agents with SK               |
 
 ## Content Owners
 
